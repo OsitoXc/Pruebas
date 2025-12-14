@@ -7,36 +7,38 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --accent: #d62828;        /* rojo navideño elegante */
-  --bg-top: #dfe9f3;        /* azul hielo */
-  --bg-bottom: #c7d7e6;     /* azul invierno */
-  --card: rgba(255,255,255,0.85);
-  --muted: #4a5d73;
-  --christmas-red: #d62828;
-  --christmas-green: #4caf7d;
+  --accent: #A60B08;        /* rojo navideño */
+  --accent-dark: #5E0001;   /* rojo profundo */
+  --green-dark: #1D2E19;    /* verde pino */
+  --card: rgba(207,202,191,0.92); /* beige */
+  --muted: #5a4a43;         /* marrón suave */
 }
 
 /* reset */
 *{box-sizing:border-box}
 body,html{
-  background: linear-gradient(180deg, #dfe9f3, #c7d7e6);
-  color:#1f2d3d;
+  background: linear-gradient(180deg, #1D2E19, #0f1a14);
+  color:#1b1b1b;
 }
 .container{width:100%;max-width:980px;margin:18px auto;padding:16px}
 
 /* cards */
 .card{
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,0.45);
+  background: rgba(207,202,191,0.95);
+  border: 1px solid rgba(118,88,76,0.4);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
 }
 .card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,0.7)}
 
 /* header */
 .header{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:10px;flex-direction:column;position:relative;overflow:hidden}
 .logo{width:160px;max-width:45%}
-.h3{color:var(--accent);font-weight:800;margin:0 0 10px 0;font-size:18px;text-shadow:0 0 12px rgba(0,123,255,0.35)}
+.h3{
+  color:#A60B08;
+  text-shadow: 0 0 6px rgba(94,0,1,0.3);
+}
 .p-muted{
-  color:#516b86;
+  color:#5a4a43;
 }
 
 /* box */
@@ -60,8 +62,14 @@ textarea{min-height:84px;resize:vertical}
 .flex-between{display:flex;justify-content:space-between;align-items:center}
 
 /* button */
-.btn{background:var(--accent);color:#001;font-weight:800;padding:12px 16px;border-radius:10px;border:none;cursor:pointer;box-shadow:0 8px 20px rgba(0,123,255,0.25)}
-.btn:hover{transform:scale(1.03);box-shadow:0 12px 26px rgba(0,123,255,0.36)}
+.btn{
+  background: linear-gradient(135deg, #A60B08, #5E0001);
+  color:#fff;
+}
+
+.btn:hover{
+  box-shadow: 0 12px 26px rgba(166,11,8,0.45);
+}
 
 /* success */
 .success{display:none;padding:16px;border-radius:12px;text-align:center}
@@ -106,13 +114,13 @@ textarea{min-height:84px;resize:vertical}
 .snowflake{
   position:absolute;
   top:-140px;
-  width:70px;      /* 🔥 MÁS GRANDES */
+  width:90px;      /* 🔥 MÁS GRANDES */
   height:70px;
   background-size:contain;
   background-repeat:no-repeat;
-  opacity:0.95;
+  opacity:0.85;
   animation:snowFall linear infinite;
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.25));
+  filter: drop-shadow(0 6px 12px rgba(95,0,1,0.35));
 }
 
 @keyframes snowFall{
