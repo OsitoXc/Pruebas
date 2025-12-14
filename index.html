@@ -94,16 +94,17 @@ textarea{min-height:84px;resize:vertical}
   z-index:5;
   overflow:hidden;
 }
-
+  
 .snowflake{
   position:absolute;
-  top:-120px;
-  width:48px;
-  height:48px;
+  top:-140px;
+  width:70px;      /* 🔥 MÁS GRANDES */
+  height:70px;
   background-size:contain;
   background-repeat:no-repeat;
-  opacity:0.9;
+  opacity:0.95;
   animation:snowFall linear infinite;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.25));
 }
 
 @keyframes snowFall{
@@ -356,7 +357,7 @@ textarea{min-height:84px;resize:vertical}
     f.style.left = Math.random() * 100 + 'vw';
     f.style.animationDuration = (10 + Math.random() * 8) + 's';
     f.style.animationDelay = Math.random() * 5 + 's';
-    f.style.width = f.style.height = (40 + Math.random() * 20) + 'px';
+    f.style.width = f.style.height = (70 + Math.random() * 40) + 'px';
     f.style.backgroundImage =
       `url(${imgs[Math.floor(Math.random() * imgs.length)]})`;
     container.appendChild(f);
